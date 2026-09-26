@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#f6f3e9">
+  <meta name="description" content="A little story about our family's plum tree and the bird ornament that has kept it company since 2022.">
+  <title>Our Plum Tree</title>
+  <style>
+    :root { color-scheme: light; --paper:#f6f3e9; --ink:#263e30; --muted:#697363; --gold:#b38d35; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:Georgia,'Times New Roman',serif; }
+    main { width:min(1060px,100%); margin:auto; padding:60px 42px 44px; }
+    header { text-align:center; margin-bottom:50px; }
+    .eyebrow { margin:0 0 16px; color:var(--muted); font:11px/1.5 system-ui,sans-serif; letter-spacing:3px; text-transform:uppercase; }
+    h1 { margin:0; font-size:clamp(46px,7vw,76px); font-weight:400; letter-spacing:-2px; line-height:1.1; }
+    .ornament { width:42px; height:2px; background:var(--gold); margin:26px auto 0; }
+    .story { display:grid; grid-template-columns:1.13fr 1fr; gap:54px; align-items:center; }
+    .story + .story { margin-top:64px; grid-template-columns:1fr 1.13fr; }
+    figure { margin:0; }
+    figure a { display:block; border-radius:8px; overflow:hidden; }
+    figure a:focus-visible { outline:3px solid var(--gold); outline-offset:5px; }
+    img { display:block; width:100%; height:auto; aspect-ratio:3/4; }
+    figcaption { margin-top:12px; color:var(--muted); font:12px/1.6 system-ui,sans-serif; }
+    .number { display:block; color:var(--gold); font:11px/1.5 system-ui,sans-serif; letter-spacing:2px; margin-bottom:18px; }
+    h2 { font-size:30px; font-weight:400; line-height:1.2; margin:0 0 20px; }
+    p { font-size:19px; line-height:1.75; margin:0; }
+    footer { border-top:1px solid #d9dece; margin-top:54px; padding-top:20px; text-align:center; color:var(--muted); font:11px/1.6 system-ui,sans-serif; letter-spacing:1.5px; }
+    @media(max-width:680px) {
+      main { padding:38px 22px 30px; }
+      header { margin-bottom:32px; }
+      .story,.story + .story { display:flex; flex-direction:column; gap:28px; align-items:stretch; }
+      .story + .story { margin-top:46px; }
+      .story + .story figure { order:-1; }
+      h2 { font-size:28px; }
+      p { font-size:18px; line-height:1.75; }
+      .number { margin-bottom:12px; }
+      footer { margin-top:38px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="eyebrow">A little story from our yard</div>
+      <h1>Our Plum Tree</h1>
+      <div class="ornament" aria-hidden="true"></div>
+    </header>
+    <section class="story" aria-labelledby="tree-heading">
+      <figure>
+        <a href="photos/plum-tree.jpg" aria-label="View the full photograph of our plum tree">
+          <img src="photos/plum-tree.jpg" width="3024" height="4032" alt="Our leafy plum tree in the front yard, with a child standing beside it." fetchpriority="high">
+        </a>
+        <figcaption>Our plum tree, full of green leaves.</figcaption>
+      </figure>
+      <div>
+        <span class="number" aria-hidden="true">01 &nbsp; THE TREE</span>
+        <h2 id="tree-heading">A yearly treat</h2>
+        <p>This is the plum tree in our yard. Every year, it gives us delicious plums that our family looks forward to enjoying. The plums turn yellowish when they are ripe, and their color seems to help them go unnoticed by birds and bugs, leaving more fruit for us to enjoy.</p>
+      </div>
+    </section>
+    <section class="story" aria-labelledby="bird-heading">
+      <div>
+        <span class="number" aria-hidden="true">02 &nbsp; THE LITTLE BIRD</span>
+        <h2 id="bird-heading">A familiar little friend</h2>
+        <p>If you look closely, you can spot a little bird ornament hanging from one of the branches. We put it there in 2022, and it has been keeping our tree company for three or four years!</p>
+      </div>
+      <figure>
+        <a href="photos/little-bird.jpg" aria-label="View the full photograph of the bird ornament">
+          <img src="photos/little-bird.jpg" width="3024" height="4032" alt="A little bird ornament hanging among the leaves and branches of our plum tree." loading="lazy">
+        </a>
+        <figcaption>Our little bird has been here since 2022.</figcaption>
+      </figure>
+    </section>
+    <footer>OUR FAMILY'S PLUM TREE</footer>
+  </main>
+</body>
+</html>
