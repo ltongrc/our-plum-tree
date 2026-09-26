@@ -5,16 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#f6f3e9">
-  <meta name="description" content="A little story about our family's plum tree and the bird ornament that has kept it company since 2022.">
-  <title>Our Plum Tree</title>
+  <meta name="description" content="A little story about our family's plum tree and the bird ornament that has kept it company since 2022." data-zh="我们家的李子树，以及从2022年起就陪伴着它的小鸟挂饰的故事。" data-i18n-attribute="content">
+  <title data-zh="我们家的李子树">Our Plum Tree</title>
   <style>
     :root { color-scheme: light; --paper:#f6f3e9; --ink:#263e30; --muted:#697363; --gold:#b38d35; }
     * { box-sizing:border-box; }
-    body { margin:0; background:var(--paper); color:var(--ink); font-family:Georgia,'Times New Roman',serif; }
-    main { width:min(1060px,100%); margin:auto; padding:60px 42px 44px; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:Georgia,'Times New Roman','Songti SC',serif; }
+    main { width:min(1060px,100%); margin:auto; padding:24px 42px 44px; }
+    .language-controls { display:flex; justify-content:flex-end; min-height:44px; margin-bottom:24px; }
+    .language-toggle { min-height:44px; padding:9px 18px; border:1px solid #a4ae9b; border-radius:24px; background:transparent; color:var(--ink); font:14px/1.5 system-ui,sans-serif; cursor:pointer; }
+    .language-toggle:hover { background:#e8ebde; }
+    .language-toggle:focus-visible { outline:3px solid var(--gold); outline-offset:4px; }
     header { text-align:center; margin-bottom:50px; }
     .eyebrow { margin:0 0 16px; color:var(--muted); font:11px/1.5 system-ui,sans-serif; letter-spacing:3px; text-transform:uppercase; }
     h1 { margin:0; font-size:clamp(46px,7vw,76px); font-weight:400; letter-spacing:-2px; line-height:1.1; }
+    :lang(zh-CN) h1 { font-size:clamp(34px,6.5vw,62px); letter-spacing:0; line-height:1.3; }
+    :lang(zh-CN) p { line-height:1.9; }
     .ornament { width:42px; height:2px; background:var(--gold); margin:26px auto 0; }
     .story { display:grid; grid-template-columns:1.13fr 1fr; gap:54px; align-items:center; }
     .story + .story { margin-top:64px; grid-template-columns:1fr 1.13fr; }
@@ -28,7 +34,8 @@
     p { font-size:19px; line-height:1.75; margin:0; }
     footer { border-top:1px solid #d9dece; margin-top:54px; padding-top:20px; text-align:center; color:var(--muted); font:11px/1.6 system-ui,sans-serif; letter-spacing:1.5px; }
     @media(max-width:680px) {
-      main { padding:38px 22px 30px; }
+      main { padding:18px 22px 30px; }
+      .language-controls { margin-bottom:20px; }
       header { margin-bottom:32px; }
       .story,.story + .story { display:flex; flex-direction:column; gap:28px; align-items:stretch; }
       .story + .story { margin-top:46px; }
@@ -42,38 +49,79 @@
 </head>
 <body>
   <main>
+    <div class="language-controls">
+      <button class="language-toggle" id="language-toggle" type="button" lang="zh-CN" aria-label="Switch to Chinese" hidden>中文</button>
+    </div>
     <header>
-      <div class="eyebrow">A little story from our yard</div>
-      <h1>Our Plum Tree</h1>
+      <div class="eyebrow" data-zh="来自我们家院子的小故事">A little story from our yard</div>
+      <h1 data-zh="我们家的李子树">Our Plum Tree</h1>
       <div class="ornament" aria-hidden="true"></div>
     </header>
     <section class="story" aria-labelledby="tree-heading">
       <figure>
-        <a href="photos/plum-tree.jpg" aria-label="View the full photograph of our plum tree">
-          <img src="photos/plum-tree.jpg" width="3024" height="4032" alt="Our leafy plum tree in the front yard, with a child standing beside it." fetchpriority="high">
+        <a href="photos/plum-tree.jpg" aria-label="View the full photograph of our plum tree" data-zh="查看李子树的完整照片" data-i18n-attribute="aria-label">
+          <img src="photos/plum-tree.jpg" width="3024" height="4032" alt="Our leafy plum tree in the front yard, with a child standing beside it." data-zh="前院里枝叶茂盛的李子树，一个孩子站在树旁。" data-i18n-attribute="alt" fetchpriority="high">
         </a>
-        <figcaption>Our plum tree, full of green leaves.</figcaption>
+        <figcaption data-zh="我们家的李子树，满树都是绿叶。">Our plum tree, full of green leaves.</figcaption>
       </figure>
       <div>
-        <span class="number" aria-hidden="true">01 &nbsp; THE TREE</span>
-        <h2 id="tree-heading">A yearly treat</h2>
-        <p>This is the plum tree in our yard. Every year, it gives us delicious plums that our family looks forward to enjoying. The plums turn yellowish when they are ripe, and their color seems to help them go unnoticed by birds and bugs, leaving more fruit for us to enjoy.</p>
+        <span class="number" aria-hidden="true" data-zh="01　李子树">01 &nbsp; THE TREE</span>
+        <h2 id="tree-heading" data-zh="每年都期待的美味">A yearly treat</h2>
+        <p data-zh="这是我们家院子里的一棵李子树。每年，它都会结出好吃的李子，我们全家都盼着品尝。李子成熟时会变成淡黄色，这种颜色似乎让鸟儿和虫子不太容易注意到它们，也给我们留下了更多可以享用的果实。">This is the plum tree in our yard. Every year, it gives us delicious plums that our family looks forward to enjoying. The plums turn yellowish when they are ripe, and their color seems to help them go unnoticed by birds and bugs, leaving more fruit for us to enjoy.</p>
       </div>
     </section>
     <section class="story" aria-labelledby="bird-heading">
       <div>
-        <span class="number" aria-hidden="true">02 &nbsp; THE LITTLE BIRD</span>
-        <h2 id="bird-heading">A familiar little friend</h2>
-        <p>If you look closely, you can spot a little bird ornament hanging from one of the branches. We put it there in 2022, and it has been keeping our tree company for three or four years!</p>
+        <span class="number" aria-hidden="true" data-zh="02　小鸟挂饰">02 &nbsp; THE LITTLE BIRD</span>
+        <h2 id="bird-heading" data-zh="一位熟悉的小伙伴">A familiar little friend</h2>
+        <p data-zh="仔细看看，你会发现树枝上挂着一个小鸟挂饰。我们在2022年把它挂了上去，到现在，它已经陪伴这棵树三四年啦！">If you look closely, you can spot a little bird ornament hanging from one of the branches. We put it there in 2022, and it has been keeping our tree company for three or four years!</p>
       </div>
       <figure>
-        <a href="photos/little-bird.jpg" aria-label="View the full photograph of the bird ornament">
-          <img src="photos/little-bird.jpg" width="3024" height="4032" alt="A little bird ornament hanging among the leaves and branches of our plum tree." loading="lazy">
+        <a href="photos/little-bird.jpg" aria-label="View the full photograph of the bird ornament" data-zh="查看小鸟挂饰的完整照片" data-i18n-attribute="aria-label">
+          <img src="photos/little-bird.jpg" width="3024" height="4032" alt="A little bird ornament hanging among the leaves and branches of our plum tree." data-zh="一个小鸟挂饰挂在李子树的枝叶之间。" data-i18n-attribute="alt" loading="lazy">
         </a>
-        <figcaption>Our little bird has been here since 2022.</figcaption>
+        <figcaption data-zh="这只小鸟从2022年起就一直在这里。">Our little bird has been here since 2022.</figcaption>
       </figure>
     </section>
-    <footer>OUR FAMILY'S PLUM TREE</footer>
+    <footer data-zh="我们家的李子树">OUR FAMILY'S PLUM TREE</footer>
   </main>
+  <script>
+    (() => {
+      const toggle = document.getElementById('language-toggle');
+      const translations = Array.from(document.querySelectorAll('[data-zh]'), element => {
+        const attribute = element.dataset.i18nAttribute;
+        return {
+          element,
+          attribute,
+          en: attribute ? element.getAttribute(attribute) : element.textContent,
+          zh: element.dataset.zh
+        };
+      });
+
+      function setLanguage(language) {
+        const chinese = language === 'zh';
+        document.documentElement.lang = chinese ? 'zh-CN' : 'en';
+        for (const entry of translations) {
+          const text = chinese ? entry.zh : entry.en;
+          if (entry.attribute) entry.element.setAttribute(entry.attribute, text);
+          else entry.element.textContent = text;
+        }
+        toggle.textContent = chinese ? 'English' : '中文';
+        toggle.lang = chinese ? 'en' : 'zh-CN';
+        toggle.setAttribute('aria-label', chinese ? '切换至英文' : 'Switch to Chinese');
+        try { localStorage.setItem('plum-tree-language', language); } catch {}
+      }
+
+      let language = 'en';
+      try {
+        if (localStorage.getItem('plum-tree-language') === 'zh') language = 'zh';
+      } catch {}
+      setLanguage(language);
+      toggle.hidden = false;
+      toggle.addEventListener('click', () => {
+        setLanguage(document.documentElement.lang === 'zh-CN' ? 'en' : 'zh');
+      });
+    })();
+  </script>
 </body>
 </html>
